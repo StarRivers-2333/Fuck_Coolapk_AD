@@ -84,11 +84,6 @@ A：确保：
 
 ---
 
-# CoolApk 广告移除模块指南
-![横幅]（https://example.com/banner.png）  
-
----
-
 ## 📦 模块功能
 这个 Magisk 模块完全删除了 CoolApk 应用程序中的所有广告，需要 **HyperCeiler** 或 **CorePatch** 核心补丁功能。
 
