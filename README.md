@@ -84,97 +84,98 @@ A：确保：
 
 ---
 
-## 📦 模块功能
-这个 Magisk 模块完全删除了 CoolApk 应用程序中的所有广告，需要 **HyperCeiler** 或 **CorePatch** 核心补丁功能。
+
+## 📦 Module Functionality  
+This Magisk module completely removes all ads in CoolApk app, requires **HyperCeiler** or **CorePatch** core patching features.  
 
 ---
 
-## ⚙️ 先决条件
-### 1.安装 LSPosed 框架
--**必须使用最新的 LSPosed**（Zygisk 版本） 
--[官方下载]（https://github.com/LSPosed/LSPosed/releases）   
+## ⚙️ Prerequisites  
+### 1. Install LSPosed Framework  
+- **Must use latest LSPosed** (Zygisk version)  
+- [Official Download](https://github.com/LSPosed/LSPosed/releases)  
 
-### 2.安装核心补丁模块（选择一个） 
-|模块 |支持的作系统 |下载 |  
+### 2. Install Core Patch Module (Choose One)  
+| Module | Supported OS | Download |  
 |--------|--------------|----------|  
-|**HyperCeiler** |安卓 9-15 |[GitHub 版本]（https://github.com/ReChronoRain/HyperCeiler/releases） |  
-|**核心补丁** |安卓 9-15 |[GitHub 版本]（https://github.com/LSPosed/CorePatch/releases） | 
+| **HyperCeiler** | Android 9-15 | [GitHub Release](https://github.com/ReChronoRain/HyperCeiler/releases) |  
+| **CorePatch** | Android 9-15 | [GitHub Release](https://github.com/LSPosed/CorePatch/releases) |  
 
 ---
 
-## 🔧 核心补丁配置
-### ▶️ HyperCeiler 设置
-1. 在 LSPosed 中启用 **HyperCeiler** 并检查 **系统框架**  
-2. 打开 HyperCeiler →转到“系统框架”→“包管理服务”  
-3.**基本选项**：   
-   ''' 降价
-   ✅ 允许降级安装  
-   ✅ 禁用 Package Manager 签名验证  
-   ✅ 禁用 APK 签名验证  
-   ✅ 禁用低 API 检查  
-   ✅ 禁用持久检查  
-   ✅ 禁用包验证代理  
-   ✅ 禁用隔离的应用程序检查  
-   ✅ 允许系统应用程序安装  
+## 🔧 Core Patching Configuration  
+### ▶️ HyperCeiler Setup  
+1. Enable **HyperCeiler** in LSPosed and check **System Framework**  
+2. Open HyperCeiler → Go to `System Framework` → `Package Management Service`  
+3. **Essential options**:  
+   ```markdown
+   ✅ Allow Downgrade Installation  
+   ✅ Disable Package Manager Signature Verification  
+   ✅ Disable APK Signature Verification  
+   ✅ Disable Low API Check  
+   ✅ Disable Persistent Check  
+   ✅ Disable Package Verification Proxy  
+   ✅ Disable Isolated App Check  
+   ✅ Allow System App Installation  
    ```
-   ⚠️ > **禁用** “始终使用已安装的应用程序签名” （危险选项）
+   > ⚠️ **Disable** "Always use installed app signature" (dangerous option)
 
-### ▶️ CorePatch 设置
-1. 在 LSPosed 中启用 **CorePatch** 并检查 **Android 系统**  
-2. 配置 CorePatch：
-   ''' 降价
-   ✅ 允许降级安装  
-   ✅ 禁用 Package Manager 签名验证  
-   ✅ 禁用 APK 签名验证  
-   ✅ 绕过黑名单  
-   ✅ 绕过共享用户签名验证  
-   ✅ 禁用包验证代理  
+### ▶️ CorePatch Setup  
+1. Enable **CorePatch** in LSPosed and check **Android System**  
+2. Configure CorePatch:  
+   ```markdown
+   ✅ Allow Downgrade Installation  
+   ✅ Disable Package Manager Signature Verification  
+   ✅ Disable APK Signature Verification  
+   ✅ Bypass Blacklist  
+   ✅ Bypass Shared User Signature Verification  
+   ✅ Disable Package Verification Proxy  
    ```
-   ⚠️ > **禁用** “始终使用已安装的应用程序签名” （危险选项）
+   > ⚠️ **Disable** "Always use installed app signature" (dangerous option)
 
 ---
 
-## 📥 安装
-1. Magisk 中的 Flash 模块“Fuck_Coolapk_AD.zip”
-2.**双重重启程序**： 
-   - 首次重启：应用核心补丁设置
-   - 第二次重启：激活广告移除模块
-3. 打开 CoolApk →验证广告是否已删除
+## 📥 Installation  
+1. Flash module `Fuck_Coolapk_AD.zip` in Magisk  
+2. **Double Reboot Procedure**:  
+   - First reboot: Apply core patch settings  
+   - Second reboot: Activate ad removal module  
+3. Open CoolApk → Verify ads are removed  
 
 ---
 
-## ❓ 常见问题
-**Q： 广告还会出现吗？  
-A： 验证：  
-- 所有必需的选项均按上述方式启用
-- 在 LSPosed 中启用了 HyperCeiler/CorePatch
-- 模块在 Magisk 中显示为已启用
-- 尝试清除 CoolApk 应用数据
+## ❓ FAQ  
+**Q: Ads still appear?**  
+A: Verify:  
+- All required options are enabled as above  
+- HyperCeiler/CorePatch enabled in LSPosed  
+- Module shows as enabled in Magisk  
+- Try clearing CoolApk app data  
 
-**Q： 安装失败？ **  
-答：确保：  
-1. “始终使用已安装的应用程序签名”已禁用
-2. 所有基本选项均已启用
-3. 使用最新的 LSPosed 版本
+**Q: Installation failed?**  
+A: Ensure:  
+1. "Always use installed app signature" is DISABLED  
+2. All essential options are ENABLED  
+3. Using latest LSPosed version  
 
 ---
 
-## 🌐 支持
-- 模块问题：[GitHub Issues]（https://github.com/yourname/coolapk-adblock/issues）
-- HyperCeiler 支持：[Telegram Group]（https://t.me/HyperCeiler）
-- CorePatch 支持：[Discord Community]（https://discord.gg/lsposed）
+## 🌐 Support  
+- Module issues: [GitHub Issues](https://github.com/yourname/coolapk-adblock/issues)  
+- HyperCeiler support: [Telegram Group](https://t.me/HyperCeiler)  
+- CorePatch support: [Discord Community](https://discord.gg/lsposed)  
 
-''美人鱼
-图表 TD
-    A[安装 LSPosed] --> B{选择核心补丁模块}
-B --> C[HyperCeiler]
-B --> D[CorePatch]
-    C --> E[在 LSPosed 中启用]
+```mermaid
+graph TD
+    A[Install LSPosed] --> B{Choose Core Patch Module}
+    B --> C[HyperCeiler]
+    B --> D[CorePatch]
+    C --> E[Enable in LSPosed]
     D --> E
-    E --> F[配置基本选项]
-    F --> G[禁用危险选项]
-G --> H[闪光灯Fuck_Coolapk_AD.zip]
-H --> I[首次重启]
-I --> J[第二次重启]
-J --> K[无广告 CoolApk]
+    E --> F[Configure Essential Options]
+    F --> G[Disable Dangerous Options]
+    G --> H[Flash Fuck_Coolapk_AD.zip]
+    H --> I[First Reboot]
+    I --> J[Second Reboot]
+    J --> K[Ad-free CoolApk]
 ```
